@@ -5,6 +5,22 @@
     <title>Abiola's Gaming Site</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <script>
+        // Function to show the welcome pop-up
+        function showWelcomeMessage() {
+            alert("Welcome to the new and improved Abiola's Gaming Site! Sorry about that, I got a copyright claim and they took down the last two sites.");
+            // Set a flag in local storage to indicate the user has visited
+            localStorage.setItem('visited', 'true');
+        }
+
+        // Check if the user is visiting for the first time
+        window.onload = function() {
+            if (!localStorage.getItem('visited')) {
+                showWelcomeMessage();
+            }
+        };
+    </script>
+    
     <style>
       body {
         font-family: Lora, serif;
